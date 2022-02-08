@@ -14,6 +14,7 @@ body {
     font-family: 'Red Hat Display', sans-serif;
     background-color:  hsl(225, 100%, 94%);
     min-width: 1440px;
+    min-height: 100vh;
 }
 
 main {
@@ -29,64 +30,189 @@ main {
     background-color: hsl(225, 100%, 94%);
     background-size: 100% 50%;
     background-repeat: no-repeat;
+
+    position: relative;
 }
 
 
 .container {
-    height: 697px;
-    width: 450px;
+    max-width: 450px;
     
-    background-color: hsl(225, 100%, 98%);
+    background-color: white;
 
     border-radius: 22px;
-    
+    overflow: hidden;
+    box-shadow: 0 30px 30px -30px hsl(224, 23%, 55%);
 }
 
-.image {
+.hero {
     height: 220px;    
 }
 
-.image img {
+.hero img {
     width: 100%;
     height: 100%;
     display: block;
-
-    border-radius: 22px 22px 0 0;
 }
 
 .content {
-    padding: 48px;
-}
-
-.section {
-    width: 354px;
-    height: 100px;
-    display: inline-flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: hsl(225, 100%, 94%);
-    border-radius: 16px;
-}
-
-.note_icon {
-    display: inline-flex;
-    justify-content: space-between;
+    padding: 46px;
+    text-align: center;
 }
 
 .heading {
+    color: hsl(223, 47%, 23%);
+    font-size: 16px;
     font-weight: 900;
+    margin-bottom: 26px;
 }
 
 .paragraph {
+    color: #9094aa;
+    font-size: 16px;
     font-weight: 500;
-    color: #989cac;
-    padding: 26px 0 22px 0;
+    margin: 26px 0 22px 0;
 }
 
-p {
+.plan {
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 16px;
+    display: flex;
+    padding: 24px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.planleft-box {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.planleft-box div{
+    margin-left: 20px;
+}
+
+.planleft-box div h3 {
+    font-weight: 900;
     font-size: 16px;
+    color: hsl(223, 47%, 23%);
+}
+
+.planleft-box div p {
+    font-weight: 500;
+    font-size: 16px;
+    color: #9195a6;
+}
+
+.plan a {
+    font-weight: 700;
+    color: hsl(245, 75%, 52%);
+}
+
+.plan a:hover {
+    text-decoration: none;
+    color: #8379df;
+    cursor: pointer;
+    transition: color 100ms ease-in-out;
 }
 
 .button {
-    
+    display: block;
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+    padding: 19px 0;
+    border-radius: 12px;
+    margin: 31px 0;
+    font-weight: 700;
+    box-shadow: 0px 22px 15px #dcd8ff;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.button:hover {
+    background-color: #766cf1;
+    cursor: pointer;
+    transition: background-color 300ms ease-in-out;
+}
+
+.button2 {
+    display: block;
+    color: #79829e;
+    font-weight: 900;
+}
+
+.button2:hover {
+    color:  hsl(223, 47%, 23%);
+    cursor: pointer;
+    transition: color 300ms ease-in-out;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 450px) {
+
+    body {
+        font-size: 12px;
+        background-image: url(assets/images/pattern-background-mobile.svg);
+        background-color: hsl(225, 100%, 94%);
+        background-repeat: no-repeat;
+    }
+
+    .hero  {
+        width: 327px;
+        height: 160px;
+        display: block;
+    }
+
+    .hero img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    }
+
+    .content {
+    padding: 28px;
+    text-align: center;
+    }
+
+    .container {
+        max-width: 87%;
+    } 
+
+    .heading {
+        font-weight: 900;
+        font-size: 12px;
+    }
+
+    .paragraph {
+        font-size: 14px;
+    }
+
+    .plan {
+        padding: 14px;
+    }
+
+    .planleft-box div{
+        margin-left: 14px;
+    }
+
+    .button,
+    .button2,
+    .plan a {
+        font-size: 14px;
+    }
+
+    .attribution {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
 }
